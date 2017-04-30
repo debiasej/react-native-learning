@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
-const PhotoList = () => {
-  return (
-    <View>
-      <Text>Photo List!!</Text>
-    </View>
-  );
-};
+class PhotoList extends Component {
+
+  render() {
+    return (
+      <View>
+        <Text>Photo List!!</Text>
+      </View>
+    );
+  }
+}
 
 export default PhotoList;
