@@ -1,11 +1,15 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 
-import Header from './src/components/header';
+import Header from './src/components/Header';
+import PhotoList from './src/components/PhotoList';
 
 // Create a component
 const App = () => (
-  <Header />
+  <View>
+    <Header headerText={'Photos'} />
+    <PhotoList />
+  </View>
 );
 
 // Render it to the device
