@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import PhotoDetail from './PhotoDetail';
 
-var NUM_PHOTOS_SHOW = 10;
+const NUM_PHOTOS_SHOW = 10;
 
 class PhotoList extends Component {
   constructor(props) {
