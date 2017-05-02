@@ -13,13 +13,13 @@ class PhotoList extends Component {
   }
 
   componentWillMount() {
-    axios.get('https://jsonplaceholder.typicode.com/photos')
+    axios.get('https://demo9087061.mockable.io/api/photo_list')
       .then(response => this.setState({ photos: response.data }));
   }
 
   renderPhotoList() {
     return this.state.photos.slice(0, NUM_PHOTOS_SHOW).map(photo =>
-      <PhotoDetail key={photo.id} photo={photo} />);
+      <PhotoDetail key={photo.title} photo={photo} />);
   }
 
   render() {
