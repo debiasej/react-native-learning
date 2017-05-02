@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+
+import PhotoDetail from './PhotoDetail';
 
 class PhotoList extends Component {
   constructor(props) {
@@ -15,7 +17,7 @@ class PhotoList extends Component {
 
   renderPhotoList() {
     return this.state.photos.map(photo =>
-      <Text key={photo.id}>{photo.id}</Text>);
+      <PhotoDetail key={photo.id} photo={photo} />);
   }
 
   render() {
