@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+
+import Card from './Card';
 
 const PhotoDetail = (props) => {
   return (
-    <View>
+    <Card>
       <Text>{props.photo.id}</Text>
-    </View>
+    </Card>
   );
 };
 

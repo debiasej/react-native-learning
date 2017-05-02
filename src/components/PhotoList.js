@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import PhotoDetail from './PhotoDetail';
 
+var NUM_PHOTOS_SHOW = 10;
+
 class PhotoList extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class PhotoList extends Component {
   }
 
   renderPhotoList() {
-    return this.state.photos.map(photo =>
+    return this.state.photos.slice(0, NUM_PHOTOS_SHOW).map(photo =>
       <PhotoDetail key={photo.id} photo={photo} />);
   }
 
