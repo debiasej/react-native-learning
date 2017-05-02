@@ -3,15 +3,27 @@ import { Text, View } from 'react-native';
 import axios from 'axios';
 
 class PhotoList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { photos: [] };
+  }
+
   componentWillMount() {
     axios.get('https://jsonplaceholder.typicode.com/photos')
-      .then(respose => console.log(respose));
+      .then(response => this.setState({ photos: response.data }));
+  }
+
+  renderPhotoList() {
+    return this.state.photos.map(photo =>
+      <Text key={photo.id}>{photo.id}</Text>);
   }
 
   render() {
+    console.log(this.state);
+
     return (
       <View>
-        <Text>Photo List!!</Text>
+        {this.renderPhotoList()}
       </View>
     );
   }
